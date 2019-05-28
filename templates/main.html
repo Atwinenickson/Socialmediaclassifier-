@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Classify</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>home</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="static/assets/css/form-elements.css">
+        <link rel="stylesheet" href="static/assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="static/assets/ico/apple-touch-icon-57-precomposed.png">
+ 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+ </head>
+ <body style="background-color:#f0f0f0;">
+
+         <nav class="navbar navbar-inverse">
+            <div class="navbar-header" style="color: white;"> <p class="navbar-brand" >Social Media posts Sentiment Classifier (SPSC)</p>
+            </div>
+           <div class="navbar-header" style="color: white;"><a href="/"> <p class="navbar-brand" >Home</p></a>
+            </div>
+              <div class="navbar-header" style="color: white;float:left;"><a href="/user_logout"> <p class="navbar-brand" >logout</p></a>
+            </div>
+
+                     </nav>
+
+        <!-- Top content -->
+
+
+
+                <div class="container" sty>
+
+
+
+                    <div class="row">
+                        <div class="col-sm-5" style="background-color: ;">
+
+
+
+                                <div class="fm"   style="background-color: ;">
+                                    <form action="{{ url_for('main')}}" method="POST">
+            <p><strong style="color:black;font-size:20;float: left;">Enter Your Post Here</strong></p>
+        <!-- <input type="text" name="Post", pattern="[^@]+@[^@]+\.[a-zA-Z]", />-->
+        <textarea name="Post" rows="4" style="color: black;" cols="50", required="required",spellcheck="true" ></textarea>
+        <br/>
+
+            <p><strong style="color:black;font-size:20;float: left;">Enter Your Comment Here</strong></p>
+        <!-- <input type="text" name="Comment"/> -->
+        <textarea name="Comment" rows="4" style="color: black;" cols="50" required></textarea>
+        <br/>
+
+        <input type="submit" class="btn-info" value="predict">
+
+    </form>
+    <br>
+
+    <a href="/graph"><input type="button" value="upload file" style="color:white;background:#FF4500;
+            font-size:20px;width: ;height:;"></a>
+                                </div>
+
+
+
+
+                        </div>
+
+                        <!--<div class="col-sm-1 middle-border"></div>-->
+                        <div class="col-sm-1"></div>
+
+                        <div class="col-sm-5">
+
+                            <div class="f" style="background-color: ;">
+
+
+                                        <h3><p style="color:black;font-size:20px;text-align: center;"><b>Results for Post and Comment</b></p></h3>
+    <div style="padding:; margin:; border-width:;border-style:;border-radius:5px;background-color:white;text-align:left;float:center;">
+
+        <div class="results" style="margin-left:2px;padding:0px;background-color:;resize: vertical,horizontal;">
+            <h5>THE POST:&nbsp&nbsp {{ post }}</h5>
+        <h5>THE COMMENT:&nbsp&nbsp {{ comment }}</h5>
+</div>
+
+        <div style="margin-left:;text-align:center;"> <h5>This comment is <strong> {{ prediction }} </strong></h5></div>
+
+
+    </div>
+
+
+    <div id=''>
+        <form action="/thanks" method="post">
+           <input type=submit value='Correct' name='feedback_button'>
+            <!-- <input type=submit value='Incorrect' name='feedback_button'>-->
+           <strong  style="color: black;"> <input type=hidden value='{{ prediction }}' name='prediction'></strong>
+            <strong style="color: black;"><input type=hidden value='{{ post }}' name='Post' style="color: black;"></strong>
+            <strong style="color: black;"><input type=hidden value='{{ comment }}' name='Comment' ></strong>
+        </form>
+
+
+        </div>
+
+
+    <div style="float: left;width: 50px;">
+
+        </div><br>
+        <div style="float: right;width:;">
+
+            <form action="/main">
+
+            <input type="submit" value="Reset" style="color:white;background:black;font-size:20px;
+            width:;height:;">
+        </form>
+    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="footer-border"></div>
+                        <p style="color: black;">BSE19-5 </a>
+                            . <i class="fa fa-smile-o"></i></p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+          <!-- Javascript -->
+        <script src="static/assets/js/jquery-1.11.1.min.js"></script>
+        <script src="static/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="static/assets/js/jquery.backstretch.min.js"></script>
+        <script src="static/assets/js/scripts.js"></script>
+
+        <!--[if lt IE 10]-->
+            <script src="static/assets/js/placeholder.js"></script>
+        <![endif]-->
+</body>
+ </html>

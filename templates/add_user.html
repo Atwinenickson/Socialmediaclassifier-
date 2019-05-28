@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+<title>Admin Login</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>home</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="static/assets/css/form-elements.css">
+        <link rel="stylesheet" href="static/assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="static/assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body style="background-color:white;">
+
+         <nav class="navbar navbar-inverse">
+    		<div class="navbar-header" style="color: white;"> <p class="navbar-brand" >Social Media posts Sentiment Classifier (SPSC)</p>
+    		</div>
+             <div class="navbar-header" style="color: white;"><a href="/"> <p class="navbar-brand" >Home</p></a>
+            </div>
+
+    			     </nav>
+
+        <!-- Top content -->
+
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                           <div class="col-sm-4"></div>
+                        <div class="col-sm-5">
+
+                            <div class="form-box" style="background-color: #595959;">
+                                <div class="form-top">
+                                    <div class="form-top-left">
+
+                                        <h3>Add user</h3>
+                                        <h4>{{msg}}</h4>
+
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-lock"></i>
+	                        		</div>
+	                            </div>
+	                            <div class="form-bottom" style="background-color: lightgrey; ">
+				                    <form role="form" action="{{url_for('saveDetails')}}" method="post" class="registration-form">
+				                    	<div class="form-group">
+				                    		<label style="color:black;" for="form-first-name">First name</label>
+				                        	<input type="text" name="fname" placeholder="" required="required" class="form-first-name form-control" id="form-first-name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label style="color:black;" for="form-last-name">Last name</label>
+				                        	<input type="text" name="lname" placeholder="" required="required" class="form-last-name form-control" id="form-last-name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label style="color:black;" for="form-email">Email</label>
+				                        	<input type="email" name="email" placeholder="eg example@gmail.com" required="required" class="form-email form-control" id="form-email">
+				                        </div>
+                                         <div class="form-group">
+				                        	<label style="color:black;" >TellNumber</label>
+				                        	<input type="tel" name="no" placeholder="eg +256789092843 or 0789092843" required="required" class="form-email form-control" pattern="^\+?\d{0,13}" >
+				                        </div>
+				                         <div class="form-group">
+                                            <label style="color:black;" for="form-email">Username</label>
+                                            <input type="text" name="username" placeholder="" required="required" class="form-email form-control" >
+                                        </div>
+                                         <div class="form-group">
+                                            <label style="color:black;" >password</label>
+                                            <input type="Password" name="pass" placeholder="" required="required" class="form-email form-control">
+                                        </div>
+										 <div class="form-group">
+                                            <label style="color:black;" >User type</label>
+                                            <input type="text" name="user" placeholder="" required="required" class="form-email form-control">
+                                        </div>
+				                        <button type="submit" class="btn">Sign me up!</button>
+				                    </form>
+			                    </div>
+		                    </div>
+
+
+
+                        </div>
+<a href="/admin_panel">Go back to admin panel</a>
+
+                    </div>
+
+                </div>
+
+        <!-- Footer -->
+
+                 <!-- Javascript -->
+        <script src="static/assets/js/jquery-1.11.1.min.js"></script>
+        <script src="static/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="static/assets/js/jquery.backstretch.min.js"></script>
+        <script src="static/assets/js/scripts.js"></script>
+
+        <!--[if lt IE 10]-->
+            <script src="static/assets/js/placeholder.js"></script>
+        <![endif]-->
+
+
+    </body>
+
+</html>

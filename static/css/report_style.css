@@ -1,0 +1,21 @@
+body{
+	width:60%;
+	padding-left:18em;
+}
+
+
+
+
+.inner_table {
+	
+}
+.outer_table td{
+	width: 10%;
+}
+
+.student-photo img{
+	width:70%;
+	text-align: center;
+	height:180px;
+	
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+<title>Admin Login</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>home</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="static/assets/css/form-elements.css">
+        <link rel="stylesheet" href="static/assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="static/assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body style="background-color:white;">
+
+         <nav class="navbar navbar-inverse">
+    		<div class="navbar-header" style="color: white;"> <p class="navbar-brand" >Social Media posts Sentiment Classifier (SPSC)</p>
+    		</div>
+             <div class="navbar-header" style="color: white;"><a href="/"> <p class="navbar-brand" >Home</p></a>
+            </div>
+
+    			     </nav>
+
+        <!-- Top content -->
+
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+
+                            <div class="description">
+                                <p>
+                                    To update the model and view comments on <strong>"Social Media Post Sentiment Classifier(SPSC)"</strong> first Login.
+                                    <p>Login with username and password </p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                           <div class="col-sm-4"></div>
+                        <div class="col-sm-5">
+
+                            <div class="form-box" style="background-color: #595959;">
+                                <div class="form-top">
+                                    <div class="form-top-left">
+
+                                        <h3>Admin Login</h3>
+	                            		<p>Enter username and password to log on:</p>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-lock"></i>
+	                        		</div>
+	                            </div>
+	                            <div class="form-bottom">
+				                    <form role="form" action="" method="post" class="login-form">
+				                    	<div class="form-group">
+				                    		<label  for="form-username" style="color:white;">Username</label>
+				                        	<input type="text" name="username" placeholder="" class="form-username form-control" id="form-username">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label style="color:white;" for="form-password">Password</label>
+				                        	<input type="password" name="password" placeholder="" class="form-password form-control" id="form-password">
+				                        </div>
+				                        <button type="submit" class="btn">Sign in!</button>
+
+                                        {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+				                    </form>
+			                    </div>
+		                    </div>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+
+        <!-- Footer -->
+        <footer>
+        	<div class="container">
+        		<div class="row">
+
+        			<div class="col-sm-8 col-sm-offset-2">
+        				<div class="footer-border"></div>
+        				<p>BSE19-5 </a>
+        					. <i class="fa fa-smile-o"></i></p>
+        			</div>
+
+        		</div>
+        	</div>
+        </footer>
+
+                 <!-- Javascript -->
+        <script src="static/assets/js/jquery-1.11.1.min.js"></script>
+        <script src="static/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="static/assets/js/jquery.backstretch.min.js"></script>
+        <script src="static/assets/js/scripts.js"></script>
+
+        <!--[if lt IE 10]-->
+            <script src="static/assets/js/placeholder.js"></script>
+        <![endif]-->
+
+
+    </body>
+
+</html>
