@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: Flask-Sendmail
+Version: 0.1
+Summary: Flask extension for sendmail
+Home-page: http://github.com/ajford/flask-sendmail
+Author: Anthony Ford
+Author-email: ford.anthonyj@gmail.com
+License: BSD
+Description: 
+        Flask-Sendmail
+        ----------
+        
+        A Flask extension for sending email messages via a system's
+        built-in sendmail client.
+        
+        Please refer to the online documentation for details.
+        
+        Links
+        `````
+        
+        * `documentation <http://flask-sendmail.readthedocs.org>`_
+        * `development version
+          <https://github.com/ajford/flask-sendmail/tarball/master#egg=Flask-Sendmail>`_
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

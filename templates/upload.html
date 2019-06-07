@@ -35,26 +35,16 @@
             </div>
            <div class="navbar-header" style="color: white;"><a href="/"> <p class="navbar-brand" >Home</p></a>
             </div>
-              <div class="navbar-header" style="color: white;float:left;"><a href="/user_logout"> <p class="navbar-brand" >logout</p></a>
+              <div class="navbar-header" style="color: white;float:right;"><a href="/user_logout"> <p class="navbar-brand" style="float:right;">logout</p></a>
             </div>
 
                      </nav>
 
 
 <div class="container" style="margin-left:20px;margin-right:20px;background-color:white;height:50%;margin-top:10px;">
-    <!---
-    {% if data %}
-    <p>Data Found!!!</p>
-    {% endif %}
-    <div>{{df}}</div>
-    <br>
-    <div>{{column}}</div>
-    <br>
-    <div>{{data}}</div>
-    <br>
-    <div>{{predict}}</div>-->
+
     <div style="margin-top:7%;margin-left:10%;">
-    <h1>Upload new File</h1>
+    <h1>Upload CSV File</h1>
     <form  action="{{ url_for('upload_file')}}" method=post enctype=multipart/form-data>
       <input type=file name=file>
       <input type=submit value=Upload>
@@ -64,6 +54,9 @@
      <input type=hidden value='{{ predict }}' name='predict'>
     </form>
     </div>
+
+        <br><br><br>
+         <a href="/main"><span>&#8592;</span>Go back</a>
 </div>
 
     </div>

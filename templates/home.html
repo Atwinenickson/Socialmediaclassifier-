@@ -1,8 +1,32 @@
-<!doctype html>
 <html>
-   <body>
+    <body>
+		{% include "security/_messages.html" %}
 
-      <h2><a href = "/enternew">Add New Record</a></h2>
-      <h2><a href = "/list">Show List</a></h2>
-   </body>
+<h1>"Confirm change of email"</h1>
+
+{% if current_user.is_authenticated %}
+
+<p>Logged in as {{ current_user.email }}</p>
+
+<h2>{{ _('Menu') }}</h2>
+<ul>
+  {% if security.confirmable %}
+  <li><a href="{{ url_for('change_email') }}">Change email</a></li>
+  {% endif %}
+  {% if security.changeable %}
+  <li><a href="{{ url_for_security('change_password') }}">Change password</a><br/></li>
+  {% endif %}
+  <li><a href="{{ url_for_security('logout') }}">Logout</a></li>
+</ul>
+
+{% else %}{# current_user.is_authenticated #}
+
+{% include "security/_menu.html" %}
+
+{% endif %}{# current_user.is_authenticated #}
+
+    <a href="/user_login">Go Back to User Login</a>
+    </body>
+	
 </html>
+© 2019 BSE 19-5 PRODUCTIONS.

@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
+  <meta charset="utf-8" />
   <title>{{ title }}</title>
-            <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>home</title>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="static/assets/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="static/assets/css/form-elements.css">
@@ -30,24 +24,44 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/assets/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="static/assets/ico/apple-touch-icon-57-precomposed.png">
 
-    </head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <script type="text/javascript">
+			function showHideDiv(ele) {
+				var srcElement = document.getElementById(ele);
+				if (srcElement != null) {
+					if (srcElement.style.display == "block") {
+						srcElement.style.display = 'none';
+					}
+					else {
+						srcElement.style.display = 'block';
+					}
+					return false;
+				}
+			}
+		</script>
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
 </head>
-<body  style="background-color:white;">
-            <nav class="navbar navbar-inverse">
-    		<div class="navbar-header" style="color: white;"> <p class="navbar-brand" >Social Media posts Sentiment Classifier (SPSC)</p>
-    		</div>
-    <div class="navbar-header" style="color: white;"><a href="/"> <p class="navbar-brand" >Home</p></a>
-             </div>
-              <div class="navbar-header" style="color: white;float:left;"><a href="/user_logout"> <p class="navbar-brand" >logout</p></a>
-            </div>
-    			     </nav>
 
-<br>
-  <center>
+<body style="background-color:#F5F5F5;">
+<nav class="navbar navbar-inverse">
+            <div class="navbar-header" style="color: white;"> <p class="navbar-brand" >Social Media posts Sentiment Classifier (SPSC)</p>
+            </div>
+           <div class="navbar-header" style="color: white;"><a href="/"> <p class="navbar-brand" >Home</p></a>
+            </div>
+              <div class="navbar-header" style="color: white;float:right;"><a href="/user_logout"> <p class="navbar-brand" style="float:right;">logout</p></a>
+            </div>
+
+                     </nav>
+<a href="/main" style="float:left;"><span>&#8592;</span>Go back To choose graph</a>
+
+   <center style="margin-left:99px;margin-right:99px;margin-top:20px; background-color:white;">
+
     <h1>{{ title }}</h1>
-  </center>
-  <center style="background-color:#F5F5F5;margin-left:10%;margin-right:10%;">
 
     <canvas id="chart" width="600" height="400"></canvas>
     <script>
@@ -62,6 +76,22 @@
           fillColor: "rgba(151,187,205,0.2)",
           strokeColor: "rgba(151,187,205,1)",
           pointColor: "rgba(151,187,205,1)",
+          lineTension: 0.1,
+      backgroundColor: "rgba(75,192,192,0.4)",
+      borderColor: "rgba(75,192,192,1)",
+      borderCapStyle: 'butt',
+      borderDash: [],
+      borderDashOffset: 0.0,
+      borderJoinStyle: 'miter',
+      pointBorderColor: "rgba(75,192,192,1)",
+      pointBackgroundColor: "#fff",
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: "rgba(75,192,192,1)",
+      pointHoverBorderColor: "rgba(220,220,220,1)",
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
           data : [
             {% for item in values %}
                "{{ item }}",
@@ -87,28 +117,30 @@
        }
      );
     </script>
+ </center>
   </center>
-<div class="container" style="margin-left:10%;margin-right:10%;background-color:#FAFAFA;">
-<!--
- {% if data %}
-    <p>Data Found!!!</p>
-    {% endif %}
-  <h1>To CSV Data</h1>
-    <div>{{csv | safe}}</div>
-    <br>-->
-<h1>Data Summary</h1>
- <div style="margin-left:5%;"> {{ df | safe}}</div>
+	<center style="background-color:#F5F5F5;" >
+		<h3>Click Details button to view details.</h3>
+
+		<input type="button" value="Details" onClick="showHideDiv('divMsg')"/><br><br>
+
+		<div id="divMsg" style="background-color:#F5F5F5; ">
+            <div style="background-color:white; color:black; margin-left:70px;margin-right:70px; ">
+				<h1>Data Summary</h1>
+  {{ df | safe}}
   </br>
   <h1>Data Statistical Results</h1>
- <div style="margin-left:5%;"> {{ stat | safe}}</div>
+  {{ stat | safe}}
   </br>
-    <div style="margin-left:5%;">
 <h1>Upload new File</h1>
     <form method=post enctype=multipart/form-data>
       <input type=file name=file>
       <input type=submit value=Upload>
     </form>
-        </div>
-</div>
+                </div>
+		</div>
+
+	</center>
+
 </body>
 </html>

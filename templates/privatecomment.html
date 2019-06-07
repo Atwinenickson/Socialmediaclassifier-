@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Private Comments</title>
+</head>
+<body>
+<center>
+<h1>Download Private page Comments</h1>
+<form method="POST">
+    <label>App id</label>
+            <br><input type="text" name="app_id" value={{request.form.app_id}}></br>
+    <label>App secrete</label>
+            <br><input type="text" name="app_secret" value={{request.form.app_secret}}></br>
+    <label>File id</label>
+            <br><input type="text" name="page_id" value={{request.form.file_id}}></br>
+      <label>Access token</label>
+            <br><input type="text" name="access_token" value={{request.form.access_token}}></br>
+                        <br><input type="submit"></br>
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,16 @@
+MANIFEST.in
+README.txt
+setup.cfg
+setup.py
+send_html_email/__init__.py
+send_html_email/send_email.py
+send_html_email.egg-info/PKG-INFO
+send_html_email.egg-info/SOURCES.txt
+send_html_email.egg-info/dependency_links.txt
+send_html_email.egg-info/top_level.txt
+send_html_email/templates/email/base.html
+send_html_email/templates/email/enquiry.html
+send_html_email/templates/email_templates/base.html
+send_html_email/templates/email_templates/test.html
+send_html_email/utils/__init__.py
+send_html_email/utils/populate_template.py

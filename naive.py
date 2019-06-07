@@ -4,8 +4,6 @@ import pickle as pi
 from sklearn.preprocessing import FunctionTransformer
 from sklearn.pipeline import FeatureUnion, Pipeline
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
 import re
 import nltk
@@ -14,11 +12,11 @@ from bs4 import BeautifulSoup
 import unicodedata
 import inflect
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.model_selection import train_test_split
 
 missing_values = ["no info", ".", "n/a", "na", "--", "N/A", "NA", "??", "?"]
-df = pd.read_csv('C:/Users/atwiine/PycharmProjects/finalyearproject/man.csv', encoding='latin', sep=',', delimiter=None, header=0,
-                 index_col=None, squeeze=False, engine='python', usecols=range(0, 3),na_values=missing_values)
+df = pd.read_csv('C:/Users/atwiine/PycharmProjects/finalyearproject/final.csv', encoding='latin', sep=',', delimiter=None, header=0,
+                 index_col=None, squeeze=False, engine='python', usecols=range(0, 3))
 
 df.columns = ['Post', 'Comment', 'Sentiment']
 df['Post'].fillna(method="ffill", inplace=True)

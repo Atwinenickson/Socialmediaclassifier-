@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+bcrypt_tool/__init__.py
+bcrypt_tool/main.py
+bcrypt_tool.egg-info/PKG-INFO
+bcrypt_tool.egg-info/SOURCES.txt
+bcrypt_tool.egg-info/dependency_links.txt
+bcrypt_tool.egg-info/entry_points.txt
+bcrypt_tool.egg-info/requires.txt
+bcrypt_tool.egg-info/top_level.txt

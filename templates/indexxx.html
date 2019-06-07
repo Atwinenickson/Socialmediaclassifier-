@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Private Posts</title>
+</head>
+<body>
+<center>
+<h1>Download Private page Posts</h1>
+<form method="POST" action="/get">
+    <label>App id</label>
+            <br><input type="text" name="app_id" value={{request.form.app_id}}></br>
+    <label>App secrete</label>
+            <br><input type="text" name="app_secret" value={{request.form.app_secret}}></br>
+    <label>Page id</label>
+            <br><input type="text" name="page_id" value={{request.form.page_id}}></br>
+    <label>Since date</label>
+            <br><input type="text" name="since_date" value={{request.form.since_date}} placeholder="YYYY-MM-DD" required="" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])/(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])/(?:30))|(?:(?:0[13578]|1[02])-31))" title="Enter a date in this format YYYY/MM/DD"/></br>
+    <label>Until date</label>
+            <br><input type="text" name="until_date" value={{request.form.until_date}} placeholder="YYYY-MM-DD" required pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])/(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])/(?:30))|(?:(?:0[13578]|1[02])-31))" title="Enter a date in this format YYYY/MM/DD"/></br>
+    <label>Access token</label>
+            <br><input type="text" name="access_token" value={{request.form.access_token}}></br>
+                        <br><input type="submit"></br>
+</form>
+</center>
+</body>
+</html>

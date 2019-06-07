@@ -1,0 +1,13 @@
+{% extends "email/base.html" %}
+
+{% block subject %}{{ subject }}{% endblock %}
+
+{% block title %}Notification of website enquiry{% endblock %}
+
+{% block content %}
+<h1>An enquiry has been made on the {{ base__site.name }} website.</h1>
+<p><strong>Name:</strong> {{ name }}</p>
+<p><strong>Email:</strong> {{ email }}</p>
+<p><strong>Subject:</strong> {{ subject }}</p>
+<p><strong>Message:</strong><br/>{{ message }}</p>
+{% endblock %}

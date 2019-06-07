@@ -1,0 +1,3 @@
+[console_scripts]
+bcrypt-tool = bcrypt_tool.main:cli
+

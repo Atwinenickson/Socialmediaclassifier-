@@ -3,13 +3,9 @@
 
     <head>
 <title>Admin Login</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>home</title>
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+      <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="static/assets/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="static/assets/css/form-elements.css">
@@ -17,21 +13,40 @@
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+        <!--[if lt IE 9]-->
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
-        <!-- Favicon and touch icons -->
         <link rel="shortcut icon" href="assets/ico/favicon.png">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/assets/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/assets/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="static/assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="static/assets/ico/apple-touch-icon-57-precomposed.png"
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
 
     </head>
 
-    <body style="background-color:white;">
+    <body style="background-color:lightgrey;">
 
          <nav class="navbar navbar-inverse">
     		<div class="navbar-header" style="color: white;"> <p class="navbar-brand" >Social Media posts Sentiment Classifier (SPSC)</p>
@@ -46,82 +61,121 @@
                 <div class="container">
 
                     <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 text">
-
-                            <div class="description">
-                                <p>
-                                    To update the model and view comments on <strong>"Social Media Post Sentiment Classifier(SPSC)"</strong> first Login.
-                                    <p>Login with username and password </p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                           <div class="col-sm-4"></div>
-                        <div class="col-sm-5">
-
-                            <div class="form-box" style="background-color: #595959;">
-                                <div class="form-top">
-                                    <div class="form-top-left">
-
-                                        <h3>Admin Login</h3>
-	                            		<p>Enter username and password to log on:</p>
-	                        		</div>
-	                        		<div class="form-top-right">
-	                        			<i class="fa fa-lock"></i>
-	                        		</div>
-	                            </div>
-	                            <div class="form-bottom">
-				                    <form role="form" action="" method="post" class="login-form">
-				                    	<div class="form-group">
-				                    		<label  for="form-username" style="color:white;">Username</label>
-				                        	<input type="text" name="username" placeholder="" class="form-username form-control" id="form-username">
-				                        </div>
-				                        <div class="form-group">
-				                        	<label style="color:white;" for="form-password">Password</label>
-				                        	<input type="password" name="password" placeholder="" class="form-password form-control" id="form-password">
-				                        </div>
-				                        <button type="submit" class="btn">Sign in!</button>
-
-                                        {% if error %}
-        <p class="error"><strong>Error:</strong> {{ error }}
-      {% endif %}
-				                    </form>
-			                    </div>
-		                    </div>
+                           <div class="col-sm-2"></div>
+                        <div class="col-sm-6" >
 
 
 
-                        </div>
+                            <div class="limiter">
+		<div class="container-login100" style="width: 600px;">
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50" style="width:500px;">
+				<strong style="color:red;">{{msg}}</strong>
+				<span class="login100-form-title p-b-59">
+						Sign Up
+					</span>
+
+				<form class="login100-form validate-form" action="" method="post">
+
+					<table>
+						<tr>
+							<td>
+
+					<div class="wrap-input100 validate-input" data-validate="fName is required">
+						<span class="label-input100">First Name</span>
+						<input class="input100" type="text" name="fname" placeholder="" required="required" style="color:black;">
+
+					</div></td>
+							<td>&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+
+                    <td><div class="wrap-input100 validate-input" data-validate="lName is required">
+						<span class="label-input100">Last Name</span>
+						<input class="input100" type="text" name="lname" placeholder="" required="required" style="color:black;">
+
+					</div>
+							</td>
+							</tr>
+						<tr>
+
+					<td><div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="email" name="email" placeholder="" required="required" style="color:black;">
+
+					</div></td>
+							<td>&nbsp&nbsp&nbsp&nbsp&nbsp</td>
 
 
+					<td><div class="wrap-input100 validate-input" data-validate="tellnumber is required">
+						<span class="label-input100">Tellphone number</span>
+						<input class="input100" type="tel" name="no" placeholder="" required="required"  pattern="^\+?\d{0,13}" style="color:black;">
+
+					</div></td>
+							</tr>
+						<tr>
 
 
+					<td><div class="wrap-input100 validate-input" data-validate="Username is required">
+						<span class="label-input100">Username</span>
+						<input class="input100" type="text" name="username" placeholder="" required="required" style="color:black;">
+
+					</div></td>
+							<td>&nbsp&nbsp&nbsp&nbsp&nbsp</td>
 
 
+					<td><div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<span class="label-input100">Password</span>
+						<input class="input100"type="password" name="pass" placeholder="" required="required" style="color:black;">
 
+					</div></td>
+							</tr>
+
+						</table><br><br>
+
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Sign Up
+							</button>
+						</div>
+
+						<a href="/user_login" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+							Sign in
+							<i class="fa fa-long-arrow-right m-l-5"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>
+					</div>
 
                     </div>
 
                 </div>
 
-        <!-- Footer -->
-        <footer>
-        	<div class="container">
-        		<div class="row">
-
-        			<div class="col-sm-8 col-sm-offset-2">
-        				<div class="footer-border"></div>
-        				<p>BSE19-5 </a>
-        					. <i class="fa fa-smile-o"></i></p>
-        			</div>
-
-        		</div>
-        	</div>
-        </footer>
 
                  <!-- Javascript -->
+         <!--===============================================================================================-->
+	<script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="static/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="static/js/main.js"></script>
+
         <script src="static/assets/js/jquery-1.11.1.min.js"></script>
         <script src="static/assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="static/assets/js/jquery.backstretch.min.js"></script>

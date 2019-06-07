@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: flask-admin-barin
+Version: 0.0.1
+Summary: A Barin backend for Flask-Admin
+Home-page: UNKNOWN
+Author: Rick Copeland
+Author-email: rick@arborian.com
+License: UNKNOWN
+Description: Some restructured text maybe
+Platform: UNKNOWN
+Classifier: Programming Language :: Python

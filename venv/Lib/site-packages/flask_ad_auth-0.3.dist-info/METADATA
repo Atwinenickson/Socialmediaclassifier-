@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: flask-ad-auth
+Version: 0.3
+Summary: Flask Azure Active Directory Auth
+Home-page: UNKNOWN
+Author: Matthias Wutte
+Author-email: matthias.wutte@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/wuttem
+Platform: UNKNOWN
+Requires-Dist: flask
+Requires-Dist: werkzeug
+Requires-Dist: flask-login
+Requires-Dist: requests
+
+UNKNOWN
+
+

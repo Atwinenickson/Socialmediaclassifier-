@@ -36,14 +36,23 @@
          <nav class="navbar navbar-inverse" role="navigation">
             <div class="navbar-header"> <p class="navbar-brand" >Social Media posts Sentiment Classifier (SPSC)</p>
              </div>
-              <div>
+
+             <div>
                <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
 
+                  <li class="dropdown"> <a href="" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b> </a>
+                   <ul class="dropdown-menu">
+                    <li><a href="/admin_upload">Update Model</a></li>
+                    <li><a href="/main">Test Model</a></li>
+                    <li><a href="{{ url_for('admin.index') }}">modify user</a></li>
 
+
+                        </ul>
+                    </li>
                      </ul>
                  </div>
-             <div class="navbar-header" style="color: white;float:left;"><a href="/admin_logout"> <p class="navbar-brand" >logout</p></a>
+             <div class="navbar-header" style="color: white;float:right;"><a href="/admin_logout" style="float:right;"> <p class="navbar-brand"  >logout</p></a>
             </div>
              </nav>
 
@@ -52,19 +61,25 @@
 <div style="margin-left:10px;marigin-right:10px;margin-top:5px;">
 
 <h1>Update and Save the Classifier with new Data</h1><br><br>
-    <strong >{{message}}</strong>
+    <strong style="color:red;" >{{message}}</strong>
 <form action="" method=post enctype=multipart/form-data>
       <input type=file name=file>
       <input type=submit value=Update_Classifier>
     </form>
    <br>
-    <strong style="color:black;"><a href="/admin_panel">Go back to admin panel</a> </strong>
-
-
-
-
 
 </div>
+
+ <!-- Javascript -->
+        <script src="static/assets/js/jquery-1.11.1.min.js"></script>
+        <script src="static/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="static/assets/js/jquery.backstretch.min.js"></script>
+        <script src="static/assets/js/scripts.js"></script>
+
+        <!--[if lt IE 10]>
+            <script src="static/assets/js/placeholder.js"></script>
+        <![endif]-->
+
 </body>
 
 </html>

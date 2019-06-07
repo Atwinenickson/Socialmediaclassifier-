@@ -1,0 +1,52 @@
+Metadata-Version: 1.0
+Name: send-html-email
+Version: 1.0.0.6
+Summary: Sends an html email that populates a template with and object, dictionary or both
+Home-page: UNKNOWN
+Author: Level Up
+Author-email: os@lvlup.us
+License: GPL v3
+Description: Send HTML Email
+        ===============
+        
+        Django app to send html emails. Email can be template uses django templates
+        and can be populated from an instance of an object, a dictionary or both.
+        
+        Usage
+        -----
+        In this example we populate the object using the User model with and
+        additional dictionary for the time.
+        
+        
+        ::
+                from send_html_email.send_email import HtmlEmail
+                from django.contrib.auth.models import User
+                from datetime import datetime
+                
+                #get instance and value for additional dict
+                now = datetime.now()
+                user = User.objects.get(id=1)
+                
+                #create headers (subject. recipient list, sender)
+                headers = ('subject', ['recipient@test.com','optional_recipeint@test.com'], 'sender@test.com')
+                
+                #create HtmlEmail instance accepts arguements header, html email template and optionally text email template
+                email = HtmlEmail(headers, 'user_notification')
+                #Send email using instance to populate values and optionally sending an additional dictionary.
+                email.send_instance_email(user,{'today':now,})
+                #send email populated by dictionary.
+                email= HtmlEmail(headers, 'what_day_is_it')
+                email.send_dict_email({'today': now})
+        
+        ::
+                from send_html_email.send_email import HtmlEmail
+                from django.contrib.auth.models import User
+                
+                user = User.objects.get(id=1)
+                
+                #do not need to create headers, done automatically
+                #create HtmlEmail instance accepts arguements header, html email template and optionally text email template
+                email = HtmlEmail(False, 'user_notification')
+                #Send email using instance to populate values and optionally sending an additional dictionary.
+                email.send_instance_email(user)
+Platform: UNKNOWN
