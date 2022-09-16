@@ -65,7 +65,7 @@ Keras-Applications==1.0.7
 Keras-Preprocessing==1.0.9
 kiwisolver==1.0.1
 lxml==4.3.3
-Mako==1.0.9
+Mako==1.2.2
 MarkupSafe==1.1.1
 marshmallow==2.19.2
 matplotlib==3.0.3
