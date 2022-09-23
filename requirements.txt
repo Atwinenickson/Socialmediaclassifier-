@@ -77,7 +77,7 @@ pandas==0.24.2
 passlib==1.7.1
 phonenumbers==8.10.12
 premailer==3.4.1
-protobuf==3.7.1
+protobuf==3.18.3
 pycparser==2.19
 PyMySQL==0.9.3
 PyMysqlDB==0.0.2
